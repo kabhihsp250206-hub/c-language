@@ -473,5 +473,3 @@
 //     sum=sum+(n%10);
 //     sumOfdigit(n/10);
 // } 
-
-// 24th question un

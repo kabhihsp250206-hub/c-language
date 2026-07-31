@@ -572,3 +572,128 @@
 //     }
 //     return 0;
 // } 
+
+// 24 question Sort a 2d array 
+// #include<stdio.h>
+// int main(){
+//     int a[3][3];
+//     printf("Enter element: \n");
+//     for(int i=0;i<3;i++){
+//         for(int j=0;j<3;j++){
+//             scanf("%d",&a[i][j]);
+//         }
+//     }
+//     printf("Array before sorting: \n");
+//     for(int i=0;i<3;i++){
+//         for(int j=0;j<3;j++){
+//             printf("%d  ",a[i][j]);
+//         }printf("\n");
+//     }
+//     int temp;
+//     for(int i=0;i<3;i++){
+//         for(int j=0;j<3;j++){
+//             for(int k=0;k<3;k++){
+//                 for(int l=0;l<3;l++){
+//                     if(a[i][j]<a[k][l]){  // <asc , >desc
+//                         temp=a[i][j];
+//                         a[i][j]=a[k][l];
+//                         a[k][l]=temp;
+//                     }
+//                     else{
+//                         continue;
+//                     }
+//                 }
+//             }
+//         }
+//     }
+//     printf("Array after sorting: \n");
+//     for(int i=0;i<3;i++){
+//         for(int j=0;j<3;j++){
+//             printf("%d  ",a[i][j]);
+//         }printf("\n");
+//     }
+//     return 0;
+// } 
+
+//  25 question sort a partiular column of a 2D array
+// #include<stdio.h>
+// int main(){
+//     int a[3][3];
+//     printf("Enter element: \n");
+//     for(int i=0;i<3;i++){
+//         for(int j=0;j<3;j++){
+//             scanf("%d",&a[i][j]);
+//         }
+//     }
+//     printf("Array before sorting: \n");
+//     for(int i=0;i<3;i++){
+//         for(int j=0;j<3;j++){
+//             printf("%d  ",a[i][j]);
+//         }printf("\n");
+//     }
+//     int temp;
+//     int col;
+//     printf("Enter col: ");
+//     scanf("%d",&col);
+//     for(int i=0;i<3;i++){
+//         for(int j=i+1;j<3;j++){
+//             if(a[i][col-1]>a[j][col-1]){
+//                 temp=a[i][col-1];
+//                 a[i][col-1]=a[j][col-1];
+//                 a[j][col-1]=temp;
+//             }
+//             else{
+//                 continue;
+//             }
+//         }
+//     }
+//     printf("Array after sorting: \n");
+//     for(int i=0;i<3;i++){
+//         for(int j=0;j<3;j++){
+//             printf("%d  ",a[i][j]);
+//         }printf("\n");
+//     }
+//     return 0;
+// } 
+
+// 26 question sort a partiular column of a 2D array
+// #include<stdio.h>
+// int main(){
+//     int a[3][3];
+//     printf("Enter element: \n");
+//     for(int i=0;i<3;i++){
+//         for(int j=0;j<3;j++){
+//             scanf("%d",&a[i][j]);
+//         }
+//     }
+//     printf("Array before sorting: \n");
+//     for(int i=0;i<3;i++){
+//         for(int j=0;j<3;j++){
+//             printf("%d  ",a[i][j]);
+//         }printf("\n");
+//     }
+//     int temp;
+//     int row;
+//     printf("Enter row: ");
+//     scanf("%d",&row);
+//     row--;
+//     for(int i=0;i<3;i++){
+//         for(int j=i+1;j<3;j++){
+//             if(a[row][i]>a[row][j]){
+//                 temp=a[row][i];
+//                 a[row][i]=a[row][j];
+//                 a[row][j]=temp;
+//             }
+//             else{
+//                 continue;
+//             }
+//         }
+//     }
+//     printf("Array after sorting: \n");
+//     for(int i=0;i<3;i++){
+//         for(int j=0;j<3;j++){
+//             printf("%d  ",a[i][j]);
+//         }printf("\n");
+//     }
+//     return 0;
+// }
