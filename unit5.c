@@ -357,3 +357,348 @@
 //     printf("Length = %d",len);
 //     return 0;
 // }
+
+// 23th question copy a string (without strcpy())
+// #include<stdio.h>
+// int main(){
+//     char str1[100],str2[100];
+//     printf("Enter a string: ");
+//     fgets(str1,sizeof(str1),stdin);
+//     int i=0;
+//     while(str1[i]!='\0'){
+//         str2[i]=str1[i];
+//         i++;
+//     }
+//     str2[i]='\0';
+//     printf("Copied string: %s",str2);
+//     return 0;
+// }
+
+// 24th question copy one to another using strcpy()
+// #include<stdio.h>
+// #include<string.h>
+// int main(){
+//     char str1[100],str2[100];
+//     printf("Enter a string: ");
+//     fgets(str1,sizeof(str1),stdin);
+//     strcpy(str2,str1);
+//     printf("Copied string: %s",str2);
+//     return 0;
+// }
+
+// 25th question reversed a string (without strrev())
+// #include<stdio.h>
+// int main(){
+//     char str1[100];
+//     printf("Enter a string: ");
+//     fgets(str1,sizeof(str1),stdin);
+//     int i=0;
+//     while(str1[i] != '\0'){
+//         if(str1[i] == '\n'){
+//             str1[i] = '\0';
+//             break;
+//         }
+//         i++;
+//     }
+//     int length=0;
+//     while(str1[length]!='\0'){
+//         length++;
+//     }
+//     int start=0;
+//     int end =length-1;
+//     char temp;
+//     while(start<end){
+//         temp=str1[start];
+//         str1[start]=str1[end];
+//         str1[end]=temp;
+//         start++;
+//         end--;
+//     }
+//     printf("Reversed string: %s",str1);
+//     return 0;
+// } 
+
+// 26th question check palindrome string (without strrev())
+// #include<stdio.h>
+// int main(){
+//     char str1[100];
+//     printf("Enter a string: ");
+//     fgets(str1,sizeof(str1),stdin);
+//     int length=0;
+//     while(str1[length]!='\0'){
+//         if(str1[length]=='\n'){
+//             str1[length]='\0';
+//             break;
+//         }
+//         length++;
+//     }
+//     int start=0;
+//     int end =length-1;
+//     int flag=1;
+//     while(start<end){
+//         if(str1[start]!=str1[end]){
+//             flag=0;
+//             break;
+//         }
+//         start++;
+//         end--;
+//     }
+//     if(flag==1){
+//         printf("Palindrome String");
+//     }
+//     else{
+//         printf("Not a Palindrome string");
+//     }
+//     return 0;
+// } 
+
+// 27th question count vowels,consonants,digits and spaces 
+// #include<stdio.h>
+// int main(){
+//     char str[100];
+//     printf("Entera string: ");
+//     fgets(str,sizeof(str),stdin);
+//     int vowels=0,consonants=0,digits=0,spaces=0;
+//     int i=0;
+//     while(str[i]!='\0'){
+//         if(str[i]>='0' && str[i]<='9'){
+//             digits++;
+//         }
+//         if(str[i]==' '){
+//             spaces++;
+//         }
+//         if((str[i] >= 'A' && str[i] <= 'Z') ||(str[i] >= 'a' && str[i] <= 'z')){
+//             if(str[i]=='a' || str[i]=='e' || str[i]=='i' || str[i]=='o' || str[i]=='u' || str[i]=='A' || str[i]=='E' || str[i]=='I' || str[i]=='O' || str[i]=='U'){
+//                 vowels++;
+//             }
+//             else{
+//                 consonants++;
+//             }
+//         }
+//         i++;
+//     }
+//     printf("Vowels = %d\n", vowels);
+//     printf("Consonants = %d\n", consonants);
+//     printf("Digits = %d\n", digits);
+//     printf("Spaces = %d", spaces);
+//     return 0;
+// } 
+
+// 28th question compare two string (without strcmp())
+// #include<stdio.h>
+// int main(){
+//     char str1[100],str2[100];
+//     printf("Enter first string: ");
+//     fgets(str1,sizeof(str1),stdin);
+//     printf("Enter second string: ");
+//     fgets(str2,sizeof(str2),stdin);
+//     int i=0,flag=1;
+//     while(str1[i] != '\0'){
+//         if(str1[i] == '\n'){
+//             str1[i] = '\0';
+//             break;
+//         }
+//         i++;
+//     }
+//     i=0;
+//     while(str2[i] != '\0'){
+//         if(str2[i] == '\n'){
+//             str2[i] = '\0';
+//             break;
+//         }
+//         i++;
+//     }
+//     i=0;
+//     while(str1[i]!='\0' || str2[i]!='\0'){
+//         if(str1[i]!=str2[i]){
+//             flag=0;
+//             break;
+//         }
+//         i++;
+//     }
+//     if(flag==1){
+//         printf("Strings are equal");
+//     }
+//     else{
+//         printf("Strings are not equal");
+//     }
+// }
+
+//29th question compare two string using strcmp()
+// #include<stdio.h>
+// #include<string.h>
+// int main(){
+//     char str1[100],str2[100];
+//     printf("Enter first string: ");
+//     fgets(str1,sizeof(str1),stdin);
+//     printf("Enter second string: ");
+//     fgets(str2,sizeof(str2),stdin);
+//     str1[strcspn(str1, "\n")] = '\0';
+//     str2[strcspn(str2, "\n")] = '\0';
+//     if(strcmp(str1,str2)==0){
+//         printf("Strings are equal");
+//     }
+//     else{
+//         printf("Strings are not equal");
+//     }
+//     return 0;
+// }
+
+// 30th question concatenate two string (without strcat())
+// #include<stdio.h>
+// int main(){
+//     char str1[100],str2[100];
+//     printf("Enter first string: ");
+//     fgets(str1,sizeof(str1),stdin);
+//     printf("Enter second string: ");
+//     fgets(str2,sizeof(str2),stdin);
+//     int i=0;
+//     while(str1[i] != '\0'){
+//         if(str1[i] == '\n'){
+//             str1[i] = '\0';
+//             break;
+//         }
+//         i++;
+//     }
+//     i=0;
+//     while(str2[i] != '\0'){
+//         if(str2[i] == '\n'){
+//             str2[i] = '\0';
+//             break;
+//         }
+//         i++;
+//     }
+//     i = 0;
+//     while(str1[i] != '\0'){
+//         i++;
+//     }
+//     int j = 0;
+//     while(str2[j] != '\0'){
+//         str1[i] = str2[j];
+//         i++;
+//         j++;
+//     }
+//     str1[i] = '\0';
+//     printf("Concatenated String: %s", str1);
+//     return 0;
+// }
+
+// 31th question concatenate two string using strcat()
+// #include<stdio.h>
+// #include<string.h>
+// int main(){
+//     char str1[100],str2[100];
+//     printf("Enter first string: ");
+//     fgets(str1,sizeof(str1),stdin);
+//     printf("Enter second string: ");
+//     fgets(str2,sizeof(str2),stdin);
+//     str1[strcspn(str1, "\n")] = '\0';
+//     str2[strcspn(str2, "\n")] = '\0';
+//     strcat(str1,str2);
+//     printf("Concatenated String: %s", str1);
+//     return 0;
+// } 
+
+//32th question Convert Uppercase to Lowercase and Lowercase to Uppercase (Character Arithmetic)
+// #include<stdio.h>
+// int main(){
+//     char str[100];
+//     printf("Enter a string: ");
+//     fgets(str,sizeof(str),stdin);
+//     int i=0;
+//     while(str[i]!='\0'){
+//         if(str[i] >= 'A' && str[i] <= 'Z'){
+//             str[i]+=32; // convert to lowercase
+//         }
+//         else if(str[i] >= 'a' && str[i] <= 'z'){
+//             str[i]-=32; // convert to uppercase
+//         }
+//         i++;
+//     }
+//     printf("Converted strings: %s",str);
+//     return 0;
+// }
+
+// 33th question count frequency of a character in a string
+// #include<stdio.h>
+// int main(){
+//     char str[100],ch;
+//     printf("Enter a string: ");
+//     fgets(str,sizeof(str),stdin);
+//     printf("Enter character: ");
+//     scanf(" %c",&ch);
+//     int i=0,count=0;
+//     while(str[i]!='\0'){
+//         if(str[i]==ch){
+//             count++;
+//         }
+//         i++;
+//     }
+//     printf("Frequency of '%c' = %d",ch,count);
+//     return 0;
+// } 
+
+// 34th question count the frequency of a each charcater in a string 
+// #include<stdio.h>
+// int main(){
+//     char str[100];
+//     printf("Enter a string: ");
+//     fgets(str,sizeof(str),stdin);
+//     int i=0;
+//     while(str[i]!='\0'){
+//         if(str[i]=='\n'){
+//             str[i]='\0';
+//             break;
+//         }
+//         i++;
+//     }
+//     for(int i=0;str[i]!='\0';i++){
+//         int count=1;
+//         for(int j=i+1;str[j]!='\0';j++){
+//             if(str[i]==str[j]){
+//                 count++;
+//                 str[j]='*';
+//             }
+//         }
+//         if(str[i]!='*'){
+//             printf("%c = %d\n",str[i],count);
+//         }
+//     }
+//     return 0;
+// }
+
+// 35th question count the frequency of each character (case-insensitive)
+// #include<stdio.h>
+// int main(){
+//     char str[100];
+//     printf("Enter a string: ");
+//     fgets(str,sizeof(str),stdin);
+//     int i=0;
+//     while(str[i]!='\0'){
+//         if(str[i]=='\n'){
+//             str[i]='\0';
+//             break;
+//         }
+//         i++;
+//     }
+//     i=0;
+//     while(str[i]!='\0'){
+//         if(str[i] >= 'a' && str[i] <= 'z'){
+//             str[i]-=32; // convert to uppercase
+//         }
+//         i++;
+//     }
+//     for(int i=0;str[i]!='\0';i++){
+//         int count=1;
+//         for(int j=i+1;str[j]!='\0';j++){
+//             if(str[i]==str[j]){
+//                 count++;
+//                 str[j]='*';
+//             }
+//         }
+//         if(str[i]!='*'){
+//             printf("%c = %d\n",str[i],count);
+//         }
+//     }
+//     return 0;
+// }
