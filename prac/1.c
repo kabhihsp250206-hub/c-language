@@ -12,3 +12,11 @@ int main(){
     printf("%d %s %.2f",s1.roll_no,s1.name,s1.marks);
     
 }
+
+
+
+// #include<bits/stdc++.h>
+// using namespace std;
+// int main(){
+//     return 0;
+// }
